@@ -1,4 +1,12 @@
-Api: https://openweathermap.org/api
+# Api: 
+https://openweathermap.org/api
+
+# What it looks like
+![warm-view](https://github.com/leahcimzil/weather-app/blob/master/public/warm.png)
+
+![warm-view](https://github.com/leahcimzil/weather-app/blob/master/public/cold.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

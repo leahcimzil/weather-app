@@ -1,13 +1,149 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Poppins', Helvetica, sans-serif;
 }
+
+.app{
+  background-image: url('./assets/cold1-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: 0.8s ease-out;
+}
+
+.app.warm {
+  background-image: linear-gradient(to bottom, rgba(153, 10, 141, 0), rgba(79, 1, 60, 0.8)),url('./assets/warm-bg.jpg');
+  transition: 0.4s ease-in;
+}
+
+.app.cold {
+  background-image: linear-gradient(to bottom, rgba(7, 45, 101, 0.3), rgba(28, 78, 240, 0.4)),url('./assets/cold1-bg.jpg');
+  transition: 0.4s ease-in;
+}
+
+main{
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+
+}
+
+.search-box .search-bar{
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: #fff;
+  border-radius:  8px;
+
+  box-shadow: 2px 4px 16px 2px rgba(76, 76, 76, 0.2);
+
+  color: #313131;
+  font-size: 14px;
+
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus{
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box .location{
+  color:#fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: -50px;
+  text-align:left;
+}
+
+.location-box .date{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  
+  text-align: left;
+  margin-left: -8px;
+  padding: 5px;
+}
+
+.weather-box{
+  position: relative;
+  margin-top: 25px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 70% 15% 15%;
+  column-gap:10px;
+}
+
+.weather-box .temp{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  
+  display: flex;
+  justify-content: flex-start;
+
+  color: #fff;
+  font-size: 102px;
+  font-weight: 500;
+  
+  padding-left: 0px;
+}
+
+.weather-box .weather{
+  grid-column-start: 3;
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  padding-right: 2px;
+
+  writing-mode:vertical-lr;
+}
+
+.weather-conditions{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 70%;
+  position: absolute;
+  bottom: 40px;
+  left: 15%;
+
+  margin:0 auto;
+  padding:20px;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.23);
+
+  text-align: center;
+  color: #fff;
+}
+
+.weather-conditions .border-right{
+  border-right: 1px solid white;
+}
+
+.weather-conditions span{
+  display: block;
+}
+
